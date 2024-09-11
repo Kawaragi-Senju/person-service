@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: person-service
+  datasource:
+    name: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/person_service
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  flyway:
+    url: jdbc:postgresql://localhost:5432/person_service
+    user: postgres
+    password: postgres
+    locations:
+      classpath:db/migration
+    baselineOnMigrate: true
