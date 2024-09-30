@@ -19,3 +19,22 @@ spring:
     locations:
       classpath:db/migration
     baselineOnMigrate: true
+  cloud:
+    stream:
+      function:
+        definition: person
+      bindings:
+        person-in-0:
+          destination: person
+          group: personGroup
+      kafka:
+        streams:
+          consumer:
+            max-poll-records: 10
+            auto-offset-reset: earliest
+            enable-auto-commit: false
+            configuration:
+              key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          binder:
+            brokers: 127.0.0.1:9092
+            autoCreateTopics: true
