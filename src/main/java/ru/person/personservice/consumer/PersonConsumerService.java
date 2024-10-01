@@ -21,6 +21,7 @@ public class PersonConsumerService {
     public Consumer<PersonStreamDTO> person() {
         return message -> {
             log.info("Received message: {}", message);
+            personRepository.save(personMapper.toEntity(message));
         };
     }
 }
