@@ -11,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
 @RequiredArgsConstructor
 @Slf4j
 public class WorkHardService {
-    public static boolean cumming = false;
+    public static boolean gaming = false;
 
     public void getBoxGetFood() {
         CompletableFuture<Void> boxFuture = CompletableFuture.runAsync(() -> {
@@ -38,32 +38,32 @@ public class WorkHardService {
         allWorkStop.thenRun(() -> log.info("Даня и Экрем закончили процессы"));
     }
 
-    public void getWankAndMotherCame(){
-        cum();
+    public void getGameAndMotherCame(){
+        game();
         came();
     }
 
     @Async
-    public void cum(){
+    public void game(){
         log.info("Ждем пока мама уйдет");
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        log.info("Начинается мастурбация");
-        cumming = true;
+        log.info("Начинается игра");
+        gaming = true;
     }
 
     @Async
     public void came(){
-        while (!cumming){
+        while (!gaming){
             try {
                 Thread.sleep(15000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }
-        log.info("Ну все сына, дрочка окончена");
+        log.info("Ну все сына, игры окончены");
     }
 }

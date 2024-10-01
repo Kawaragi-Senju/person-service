@@ -16,8 +16,8 @@ public class WorkHardController {
         workHardService.getBoxGetFood();
     }
 
-    @GetMapping("/wank-mother-came")
-    public void getWankAndMotherCame(){
-        workHardService.getWankAndMotherCame();
+    @GetMapping("/game-mother-came")
+    public void getGameAndMotherCame(){
+        workHardService.getGameAndMotherCame();
     }
 }
