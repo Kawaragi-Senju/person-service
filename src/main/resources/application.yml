@@ -15,7 +15,7 @@ spring:
   flyway:
     url: jdbc:postgresql://localhost:5432/person_service
     user: postgres
-    password: postgres
+    password: admin
     locations:
       classpath:db/migration
     baselineOnMigrate: true
