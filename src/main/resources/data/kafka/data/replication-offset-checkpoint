@@ -1,12 +1,11 @@
 0
-52
+51
 __consumer_offsets 29 0
 __consumer_offsets 43 0
 __consumer_offsets 0 0
 __consumer_offsets 6 0
 __consumer_offsets 35 0
 __consumer_offsets 30 0
-person 0 0
 __consumer_offsets 13 0
 __consumer_offsets 26 0
 __consumer_offsets 21 0
@@ -14,9 +13,9 @@ __consumer_offsets 19 0
 __consumer_offsets 25 0
 __consumer_offsets 33 0
 __consumer_offsets 41 0
-person-out-0 0 4
 __consumer_offsets 37 0
 __consumer_offsets 8 0
+person-request 0 2
 __consumer_offsets 24 0
 __consumer_offsets 49 0
 __consumer_offsets 3 0
@@ -31,7 +30,7 @@ __consumer_offsets 12 0
 __consumer_offsets 36 0
 __consumer_offsets 45 0
 __consumer_offsets 16 0
-__consumer_offsets 10 8
+__consumer_offsets 10 77
 __consumer_offsets 11 0
 __consumer_offsets 20 0
 __consumer_offsets 47 0

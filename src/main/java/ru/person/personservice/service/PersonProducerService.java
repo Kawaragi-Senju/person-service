@@ -21,7 +21,7 @@ public class PersonProducerService {
         try {
             Message<PersonStreamDTO> message = MessageBuilder.withPayload(personMapper.toStream(personDTO))
                     .build();
-            streamBridge.send("person-out-0", message);
+            streamBridge.send("person-request", message);
             log.info("Headers: {} Payload: {}", message.getHeaders(), message.getPayload());
         } catch (Exception e) {
             log.error("Error", e);

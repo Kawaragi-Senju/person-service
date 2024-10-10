@@ -1,19 +1,16 @@
 package ru.person.personservice.job;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
 import ru.person.personservice.service.TestLoggerService;
 
-@Service
-@RequiredArgsConstructor
 public class TestLoggerJobService {
 
-    private final TestLoggerService testLoggerService;
+    @Autowired
+    private TestLoggerService testLoggerService;
 
-    @Scheduled(cron = "15 * * * * *")
-    public void run(){
+    @Scheduled(cron = "${job.test-logger-job.cron}")
+    public void run() {
         testLoggerService.testLogger();
     }
-
 }

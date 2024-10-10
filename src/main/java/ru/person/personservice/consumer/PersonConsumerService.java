@@ -18,7 +18,7 @@ public class PersonConsumerService {
     private final PersonRepository personRepository;
 
     @Bean
-    public Consumer<PersonStreamDTO> person() {
+    public Consumer<PersonStreamDTO> personRequest() {
         return message -> {
             log.info("Received message: {}", message);
             personRepository.save(personMapper.toEntity(message));

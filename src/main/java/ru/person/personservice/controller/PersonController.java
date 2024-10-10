@@ -2,11 +2,16 @@ package ru.person.personservice.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.bind.annotation.*;
+import ru.person.personservice.consumer.PersonConsumerService;
 import ru.person.personservice.dto.PersonDTO;
+import ru.person.personservice.dto.PersonStreamDTO;
 import ru.person.personservice.entity.Person;
 import ru.person.personservice.service.PersonProducerService;
 import ru.person.personservice.service.PersonService;
+
+import java.util.function.Consumer;
 
 
 @RestController
@@ -33,4 +38,6 @@ public class PersonController {
     public void createKafka(@RequestBody PersonDTO personDTO){
         personProducerService.createToKafka(personDTO);
     }
+
+
 }
